@@ -1,7 +1,7 @@
 # 🌦 Modern Weather Forecast Web App
 
-A modern and responsive Weather Application built using HTML, CSS, and JavaScript.  
-This app fetches real-time weather data and a 5-day forecast using the OpenWeather API.
+This project is a responsive Weather Forecast Web Application built using HTML, CSS, and JavaScript.  
+It uses the OpenWeather API to fetch and display real-time weather data, including temperature, humidity, wind speed, pressure, and a 5-day forecast.
 
 ---
 
@@ -53,4 +53,5 @@ This app fetches real-time weather data and a 5-day forecast using the OpenWeath
 3. Add your own OpenWeather API key:
    
 ```javascript
+
 const apiKey = "YOUR_API_KEY_HERE";
