@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ===================== CONFIG ===================== */
-  const apiKey = "3223e8f1d775761b1dbc8444236b2e06API_Key" // Replace with your OpenWeatherMap API key
+  const apiKey = "3223e8f1d775761b1dbc8444236b2e06"; 
   const searchBtn = document.getElementById("searchBtn");
   const cityInput = document.getElementById("cityInput");
   const errorMsg = document.getElementById("error");
@@ -46,46 +45,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
       errorMsg.innerText = "";
 
-      /* -------- FETCH CURRENT WEATHER -------- */
       const currentRes = await fetch(
         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
       );
 
+      if (!currentRes.ok) throw new Error("City not found");
+
       const current = await currentRes.json();
 
-      if (current.cod !== 200) throw new Error();
-
-      /* -------- UPDATE CURRENT UI -------- */
       document.getElementById("cityName").innerText =
-        current.name + ", " + current.sys.country;
+        `${current.name}, ${current.sys.country}`;
 
       document.getElementById("date").innerText =
         new Date().toDateString();
 
       document.getElementById("temp").innerText =
-        Math.round(current.main.temp) + "°C";
+        `${Math.round(current.main.temp)}°C`;
 
       document.getElementById("desc").innerText =
         current.weather[0].description;
 
       document.getElementById("humidity").innerText =
-        current.main.humidity + "%";
+        `${current.main.humidity}%`;
 
       document.getElementById("wind").innerText =
-        (current.wind.speed * 3.6).toFixed(1) + " km/h";
+        `${(current.wind.speed * 3.6).toFixed(1)} km/h`;
 
       document.getElementById("pressure").innerText =
-        current.main.pressure + " hPa";
+        `${current.main.pressure} hPa`;
 
-      /* -------- WEATHER ICON FIXED -------- */
+      /* Weather Icon */
       const iconCode = current.weather[0].icon;
-
       iconElement.src =
         `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-
       iconElement.style.display = "block";
 
-      /* -------- DYNAMIC BACKGROUND -------- */
+      /* Background */
       const weatherType = current.weather[0].main.toLowerCase();
 
       heroSection.classList.remove(
@@ -96,25 +91,20 @@ document.addEventListener("DOMContentLoaded", function () {
         "thunderstorm"
       );
 
-      if (weatherType.includes("clear"))
-        heroSection.classList.add("clear");
-
-      else if (weatherType.includes("cloud"))
-        heroSection.classList.add("clouds");
-
+      if (weatherType.includes("clear")) heroSection.classList.add("clear");
+      else if (weatherType.includes("cloud")) heroSection.classList.add("clouds");
       else if (weatherType.includes("rain") || weatherType.includes("drizzle"))
         heroSection.classList.add("rain");
-
-      else if (weatherType.includes("snow"))
-        heroSection.classList.add("snow");
-
+      else if (weatherType.includes("snow")) heroSection.classList.add("snow");
       else if (weatherType.includes("thunder"))
         heroSection.classList.add("thunderstorm");
 
-      /* -------- FETCH FORECAST -------- */
+      /* Forecast */
       const forecastRes = await fetch(
         `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
       );
+
+      if (!forecastRes.ok) throw new Error("Forecast error");
 
       const forecast = await forecastRes.json();
       const forecastDiv = document.getElementById("forecast");
@@ -134,11 +124,9 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
       }
 
-    } catch {
+    } catch (error) {
 
-      /* -------- ERROR HANDLING -------- */
       errorMsg.innerText = "City not found ❌";
-
       iconElement.style.display = "none";
 
       heroSection.classList.remove(
@@ -148,8 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "snow",
         "thunderstorm"
       );
-
-      heroSection.scrollIntoView({ behavior: "smooth" });
     }
   }
 
+});
