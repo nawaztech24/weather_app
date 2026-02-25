@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ===================== CONFIG ===================== */
-  const apiKey = "3223e8f1d775761b1dbc8444236b2e06"; 
+  const apiKey = "YOUR_API_KEY_HERE"; 
   const searchBtn = document.getElementById("searchBtn");
   const cityInput = document.getElementById("cityInput");
   const errorMsg = document.getElementById("error");
