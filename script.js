@@ -1,7 +1,8 @@
+<<<<<<< HEAD
 document.addEventListener("DOMContentLoaded", function () {
 
   /* ===================== CONFIG ===================== */
-  const apiKey = "Your_API_Key" // Replace with your OpenWeatherMap API key
+  const apiKey = "3223e8f1d775761b1dbc8444236b2e06API_Key" // Replace with your OpenWeatherMap API key
   const searchBtn = document.getElementById("searchBtn");
   const cityInput = document.getElementById("cityInput");
   const errorMsg = document.getElementById("error");
@@ -152,4 +153,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-});

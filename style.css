@@ -1,4 +1,5 @@
-/* ================= GLOBAL RESET ================= */
+
+/* === GLOBAL RESET === */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +10,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* ================= HERO SECTION ================= */
+/* === HERO SECTION === */
 
 .hero {
   min-height: 100vh;
@@ -59,7 +60,7 @@ body {
   background-image: url("https://images.unsplash.com/photo-1500673922987-e212871fec22");
 }
 
-/* ================= TITLE ================= */
+/* === TITLE === */
 
 .main-title {
   font-size: 50px;
@@ -67,7 +68,7 @@ body {
   font-weight: 600;
 }
 
-/* ================= APP CONTAINER ================= */
+/* === APP CONTAINER === */
 
 .app-container {
   transition: all 0.4s ease;
@@ -81,7 +82,7 @@ body {
   box-shadow: 0 40px 80px rgba(0,0,0,0.7);
 }
 
-/* ================= WEATHER CARD ================= */
+/* === WEATHER CARD === */
 
 .weather-card {
   max-width: 500px;
@@ -96,7 +97,7 @@ body {
     0 0 30px rgba(0,200,255,0.4);
 }
 
-/* ================= SEARCH ================= */
+/* === SEARCH === */
 
 .search {
   display: flex;
@@ -124,7 +125,7 @@ body {
   transform: scale(1.05);
 }
 
-/* ================= MAIN WEATHER ================= */
+/* === MAIN WEATHER === */
 
 .weather-main {
   display: flex;
@@ -152,7 +153,7 @@ body {
   font-weight: 700;
 }
 
-/* ================= WEATHER STATS ================= */
+/* === WEATHER STATS === */
 
 .stats {
   display: flex;
@@ -169,7 +170,7 @@ body {
   gap: 5px;
 }
 
-/* ================= FORECAST ================= */
+/* === FORECAST === */
 
 .forecast-title {
   margin-top: 30px;
@@ -206,7 +207,7 @@ body {
   height: 50px;
 }
 
-/* ================= ERROR ================= */
+/* === ERROR === */
 
 .error {
   color: #ff4d4d;
@@ -214,7 +215,7 @@ body {
   font-weight: 600;
 }
 
-/* ================= FEATURES ================= */
+/* === FEATURES === */
 
 .features {
   background: #f8f9fb;
@@ -248,7 +249,7 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 
-/* ================= PREVIEW ================= */
+/* === PREVIEW === */
 
 .preview {
   background: linear-gradient(135deg, #0b162b, #0e1f3d);
@@ -262,7 +263,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* ================= TOGGLE BUTTONS ================= */
+/* === TOGGLE BUTTONS === */
 
 .view-buttons {
   margin-bottom: 50px;
@@ -292,7 +293,7 @@ body {
   transform: translateY(-3px);
 }
 
-/* ================= TECH CARD ================= */
+/* === TECH CARD === */
 
 .tech-card {
   background: #1e2a3f;
@@ -342,4 +343,5 @@ body {
 .tech-list img {
   width: 24px;
   height: 24px;
+
 }
