@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="hero">
+
+  <div class="app-container" id="appContainer">
+
+    <h1 class="main-title"> Weather App 🌤</h1>
+
+    <div class="weather-card">
+
+      <div class="search">
+        <input type="text" id="cityInput" placeholder="Enter City Name...">
+        <button id="searchBtn">Search</button>
+      </div>
+
+      <h2 id="cityName"></h2>
+      <p id="date"></p>
+
+      <div class="weather-main">
+
+        <img id="icon" class="weather-icon" alt="Weather Icon">
+
+        <div>
+          <h1 id="temp"></h1>
+          <p id="desc"></p>
+        </div>
+
+      </div>
+
+      <div class="stats">
+
+        <div>
+          💧
+          <span id="humidity"></span>
+          <p>Humidity</p>
+        </div>
+
+        <div>
+          💨
+          <span id="wind"></span>
+          <p>Wind</p>
+        </div>
+
+        <div>
+          🌡️
+          <span id="pressure"></span>
+          <p>Pressure</p>
+        </div>
+
+      </div>
+
+      <h3 class="forecast-title">5 Day Forecast</h3>
+      <div class="forecast" id="forecast"></div>
+
+      <p id="error" class="error"></p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FEATURES -->
+<section class="features">
+
+  <h2 class="section-title">⚡ Features</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature-card">
+      <div class="icon">🔍</div>
+      <h4>City Search</h4>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">🌡️</div>
+      <h4>Temperature</h4>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">🌤️</div>
+      <h4>Weather Icon</h4>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">💧</div>
+      <h4>Humidity</h4>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">💨</div>
+      <h4>Wind Speed</h4>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">📱</div>
+      <h4>Responsive</h4>
+    </div>
+
+    <div class="feature-card">
+      <div class="icon">⚠️</div>
+      <h4>Error Handling</h4>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- PREVIEW -->
+<section class="preview">
+
+  <h2 class="preview-title"> App Preview 🖥</h2>
+  <div class="view-buttons">
+    <button id="desktopBtn">Desktop View</button>
+    <button id="mobileBtn">Mobile View</button>
+  </div>
+
+  <div class="tech-card">
+
+    <h3>Technologies Used</h3>
+
+    <ul class="tech-list">
+
+      <li>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+        HTML5
+      </li>
+
+      <li>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+        CSS3
+      </li>
+
+      <li>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        JavaScript
+      </li>
+
+      <li>🌐 OpenWeather API</li>
+      <li>⚡ Fetch API</li>
+      <li>📱 Responsive Design</li>
+
+    </ul>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
