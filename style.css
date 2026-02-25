@@ -1,0 +1,345 @@
+/* ================= GLOBAL RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero {
+  min-height: 100vh;
+  text-align: center;
+  padding-top: 60px;
+  color: white;
+  transition: 0.6s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Cinematic Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(255,150,0,0.2));
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Weather Backgrounds ===== */
+
+.hero.clear {
+  background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb");
+}
+
+.hero.clouds {
+  background-image: url("https://images.unsplash.com/photo-1499346030926-9a72daac6c63");
+}
+
+.hero.rain {
+  background-image: url("https://images.unsplash.com/photo-1501696461408-3e7eaa5e7d6f");
+}
+
+.hero.snow {
+  background-image: url("https://images.unsplash.com/photo-1483664852095-d6cc6870702d");
+}
+
+.hero.thunderstorm {
+  background-image: url("https://images.unsplash.com/photo-1500673922987-e212871fec22");
+}
+
+/* ================= TITLE ================= */
+
+.main-title {
+  font-size: 50px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+/* ================= APP CONTAINER ================= */
+
+.app-container {
+  transition: all 0.4s ease;
+}
+
+.mobile-mode {
+  width: 375px;
+  margin: auto;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.7);
+}
+
+/* ================= WEATHER CARD ================= */
+
+.weather-card {
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(15,30,60,0.85);
+  backdrop-filter: blur(30px);
+  box-shadow:
+    0 25px 60px rgba(0,0,0,0.6),
+    0 0 30px rgba(0,200,255,0.4);
+}
+
+/* ================= SEARCH ================= */
+
+.search {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.search input {
+  flex: 1;
+  padding: 14px;
+  border-radius: 15px 0 0 15px;
+  border: none;
+}
+
+.search button {
+  padding: 14px 20px;
+  border-radius: 0 15px 15px 0;
+  border: none;
+  background: linear-gradient(45deg,#00c6ff,#0072ff);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search button:hover {
+  transform: scale(1.05);
+}
+
+/* ================= MAIN WEATHER ================= */
+
+.weather-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 25px 0;
+}
+
+/* 3D PNG ICON STYLE */
+.weather-icon {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.6));
+  transition: 0.4s ease;
+}
+
+.weather-icon:hover {
+  transform: scale(1.1);
+}
+
+#temp {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+/* ================= WEATHER STATS ================= */
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ================= FORECAST ================= */
+
+.forecast-title {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.forecast {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.forecast div {
+  background: rgba(255,255,255,0.15);
+  padding: 15px;
+  border-radius: 20px;
+  min-width: 110px;
+  text-align: center;
+  transition: 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.forecast div:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-5px);
+}
+
+.forecast img {
+  width: 50px;
+  height: 50px;
+}
+
+/* ================= ERROR ================= */
+
+.error {
+  color: #ff4d4d;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+  background: #f8f9fb;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 50px;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: white;
+  width: 170px;
+  padding: 25px 15px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* ================= PREVIEW ================= */
+
+.preview {
+  background: linear-gradient(135deg, #0b162b, #0e1f3d);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.preview-title {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+/* ================= TOGGLE BUTTONS ================= */
+
+.view-buttons {
+  margin-bottom: 50px;
+}
+
+.view-buttons button {
+  padding: 12px 28px;
+  margin: 10px;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.view-buttons button:first-child {
+  background: linear-gradient(45deg,#16a34a,#22c55e);
+  color: white;
+}
+
+.view-buttons button:last-child {
+  background: linear-gradient(45deg,#7c3aed,#a855f7);
+  color: white;
+}
+
+.view-buttons button:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= TECH CARD ================= */
+
+.tech-card {
+  background: #1e2a3f;
+  padding: 40px;
+  border-radius: 30px;
+  width: 300px;
+  margin: auto;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+}
+
+.tech-card h3 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.tech-card ul {
+  list-style: none;
+  line-height: 2.2;
+  font-size: 18px;
+}
+
+.tech {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.tech.html { background: #ff6a00; }
+.tech.css { background: #1e90ff; }
+.tech.js { background: #facc15; }
+.tech-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.tech-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.tech-list img {
+  width: 24px;
+  height: 24px;
+}
